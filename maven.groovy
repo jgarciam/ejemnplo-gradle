@@ -16,4 +16,4 @@ def call(){
         sh "curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
     }
 }
-return thiss
+return this
