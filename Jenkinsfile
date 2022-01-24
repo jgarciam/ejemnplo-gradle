@@ -31,10 +31,10 @@ pipeline {
                             ]
                         if(${env.MAVEN_GRADLE_OPTION} == "Maven"){
                             def ejecucion = load 'maven.groovy'
-                            mavenPipeline.call()
+                            ejecucion.mavenPipeline()
                         } else {
                             def ejecucion = load 'gradle.groovy'
-                            mavenPipeline.call()
+                            ejecucion.mavenPipeline()                            
                         }
                     }
                 }
