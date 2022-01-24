@@ -1,7 +1,7 @@
 def call(){
     stage("Compile"){        
         dir('src'){
-            sh './mvnw clean compile -e'
+            sh './${env.JOB_NOME}/mvnw clean compile -e'
         }            
     }
     stage("Test"){        
@@ -24,4 +24,4 @@ def call(){
         sh "curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
     }
 }
-return this
+return thiss
